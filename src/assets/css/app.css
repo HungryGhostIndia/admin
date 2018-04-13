@@ -18857,7 +18857,12 @@ a.text-danger:hover,a.text-danger:focus{
     vertical-align:sub
 }
 
-
+.dis-0{
+    display: none !important;
+}
+.dis-inb{
+    display: inline-block !important;
+}
 
 /*--select -- */
 
