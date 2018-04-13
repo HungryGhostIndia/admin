@@ -90,7 +90,7 @@ export class AuthStorage {
     getAuthorizationHeader() {
         var authData = this.getAuthData();
         if (authData)
-            return authData.data.token;
+            return authData.token;
     }
 
     setAuthorizationHeader(authResponse) {

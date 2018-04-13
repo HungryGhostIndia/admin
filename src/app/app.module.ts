@@ -21,6 +21,11 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LeftbarComponent } from './components/leftbar/leftbar.component';
 import { MenuSetupComponent } from './components/menu-setup/menu-setup.component';
+import { RestSetupComponent } from './components/rest-setup/rest-setup.component';
+import { ResDetailsComponent } from './components/rest-setup/res-details/res-details.component';
+import { SecDetailsComponent } from './components/rest-setup/sec-details/sec-details.component';
+import { UserCredComponent } from './components/rest-setup/user-cred/user-cred.component';
+
 import { LoginComponent } from './components/login/login.component';
 import { AuthInterceptor, AuthGuard, AccountService } from './services/account.service';
 import { ConstService } from './services/const.service';
@@ -33,6 +38,10 @@ import { ConstService } from './services/const.service';
     HeaderComponent,
     LeftbarComponent,
     MenuSetupComponent,
+    RestSetupComponent,
+    ResDetailsComponent,
+    SecDetailsComponent,
+    UserCredComponent,
     LoginComponent
   ],
   imports: [
@@ -41,6 +50,7 @@ import { ConstService } from './services/const.service';
     HttpModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
     TypeaheadModule.forRoot(),

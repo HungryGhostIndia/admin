@@ -5,7 +5,7 @@ export class ConstService {
             this.baseUrl = 'https://adhrSystem.api.com/api';  
         }
         else {
-            this.baseUrl = 'http://localhost:8882/api';   
+            this.baseUrl = 'https://hungry-ghost.herokuapp.com/api';   
         }      
 
     }
