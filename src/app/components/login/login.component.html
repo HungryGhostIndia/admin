@@ -1,0 +1,37 @@
+<body class="min-h-fullscreen bg-img center-vh p-20" style="background-image: url(../assets/img/bg/2.jpg);" data-overlay="7">
+
+  <div class="card card-round card-shadowed px-50 py-30 w-400px mb-0" style="max-width: 100%">
+    <h5 class="text-uppercase">Sign in</h5>
+    <br>
+
+    <form>
+      <div class="form-group">
+          <label for="username">Username</label>
+        <input type="text" class="form-control" name="username" id="username" [(ngModel)]="loginData.userName">        
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="loginData.pass">        
+      </div>
+
+      <div class="form-group flexbox">
+        <label class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" checked>
+          <span class="custom-control-indicator"></span>
+          <span class="custom-control-description">Remember me</span>
+        </label>
+
+        <a class="text-muted hover-primary fs-13" href="#">Forgot password?</a>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-bold btn-block btn-primary" type="submit" (click)="login()">Login</button>
+      </div>
+    </form>
+
+  </div>
+
+
+
+</body>

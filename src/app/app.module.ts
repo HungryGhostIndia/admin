@@ -26,6 +26,9 @@ import { ResDetailsComponent } from './components/rest-setup/res-details/res-det
 import { SecDetailsComponent } from './components/rest-setup/sec-details/sec-details.component';
 import { UserCredComponent } from './components/rest-setup/user-cred/user-cred.component';
 
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor, AuthGuard, AccountService } from './services/account.service';
+import { ConstService } from './services/const.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { UserCredComponent } from './components/rest-setup/user-cred/user-cred.c
     RestSetupComponent,
     ResDetailsComponent,
     SecDetailsComponent,
-    UserCredComponent
+    UserCredComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +56,11 @@ import { UserCredComponent } from './components/rest-setup/user-cred/user-cred.c
     TypeaheadModule.forRoot(),
     RatingModule.forRoot(),
   ],
-  providers: [
-    
-  ],
+  providers: [ConstService, AuthGuard, AccountService,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 
