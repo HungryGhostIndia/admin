@@ -21,7 +21,9 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LeftbarComponent } from './components/leftbar/leftbar.component';
 import { MenuSetupComponent } from './components/menu-setup/menu-setup.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { AuthInterceptor, AuthGuard, AccountService } from './services/account.service';
+import { ConstService } from './services/const.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { MenuSetupComponent } from './components/menu-setup/menu-setup.component
     HomeComponent,
     HeaderComponent,
     LeftbarComponent,
-    MenuSetupComponent
+    MenuSetupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +46,11 @@ import { MenuSetupComponent } from './components/menu-setup/menu-setup.component
     TypeaheadModule.forRoot(),
     RatingModule.forRoot(),
   ],
-  providers: [
-    
-  ],
+  providers: [ConstService, AuthGuard, AccountService,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 
