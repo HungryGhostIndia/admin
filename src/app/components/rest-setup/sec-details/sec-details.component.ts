@@ -3,7 +3,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-sec-details',
   templateUrl: './sec-details.component.html',
-  styleUrls: ['./sec-details.component.css']
 })
 export class SecDetailsComponent implements OnInit {
   currentStep: Number = 2;

@@ -18864,5 +18864,8 @@ a.text-danger:hover,a.text-danger:focus{
     display: inline-block !important;
 }
 
+.cp{
+    cursor: pointer;
+}
 /*--select -- */
 

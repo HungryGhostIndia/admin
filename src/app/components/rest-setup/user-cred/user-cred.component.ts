@@ -3,7 +3,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-user-cred',
   templateUrl: './user-cred.component.html',
-  styleUrls: ['./user-cred.component.css']
 })
 export class UserCredComponent implements OnInit {
   currentStep: Number = 3;
